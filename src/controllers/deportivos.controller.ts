@@ -26,7 +26,7 @@ export const getDeportivobyId = async (req:Request, res: Response): Promise<Resp
     return res.json({
         message: 'Zapato Deportivo creado',
         body: {
-            bota: {
+            deportivo: {
                 marca,
                 color,
                 cantidad, 

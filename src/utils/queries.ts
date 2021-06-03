@@ -15,7 +15,11 @@ const queries = {
     UPDATE_DEPORTIVO: 'UPDATE public."ZapatosDeportivos" SET "Color"=$1, "Marca"=$2, "Cantidad"=$3, "Precio"=$4 WHERE id=$5',
 
     //Zapatos elegantes
-    GET_ELEGANTES: `SELECT * FROM public.ZapatosElegantes`,
+    GET_ELEGANTES: `SELECT * FROM public."ZapatosElegantes"`,
+    GET_ELEGANTE_BY_ID: `SELECT * FROM public."ZapatosElegantes" WHERE id = $1`,
+    INSERT_ELEGANTE: 'INSERT INTO public."ZapatosElegantes"("Tipo", "Color", "Marca", "Cantidad", "Precio") VALUES ($1, $2, $3, $4, $5)',
+    DELETE_ELEGANTE: 'DELETE FROM public."ZapatosElegantes" WHERE ID = $1',
+    UPDATE_ELEGANTE: 'UPDATE public."ZapatosElegantes" SET "Tipo"=$1, "Color"=$2, "Marca"=$3, "Cantidad"=$4, "Precio"=$5 WHERE id=$6',
 };
   
   export default queries;

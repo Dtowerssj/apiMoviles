@@ -1,6 +1,7 @@
 import {Router} from 'express'
 import {getBotas, getBotabyId, createBota, deleteBota, updateBota} from '../controllers/botas.controller'
 import {getDeportivos, getDeportivobyId, createDeportivo, deleteDeportivo, updateDeportivo} from '../controllers/deportivos.controller'
+import {getElegantes, getElegantebyId, createElegante, deleteElegante, updateElegante} from '../controllers/elegantes.controller'
 
 
 const router = Router();
@@ -18,5 +19,12 @@ router.get('/deportivos/:id', getDeportivobyId);
 router.post('/deportivos', createDeportivo);
 router.put('/deportivos/:id', updateDeportivo);
 router.delete('/deportivos/:id', deleteDeportivo);
+
+//Elegantes
+router.get('/elegantes', getElegantes);
+router.get('/elegantes/:id', getElegantebyId);
+router.post('/elegantes', createElegante);
+router.put('/elegantes/:id', updateElegante);
+router.delete('/elegantes/:id', deleteElegante);
 
 export default router;

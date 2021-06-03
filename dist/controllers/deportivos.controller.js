@@ -39,7 +39,7 @@ const createDeportivo = (req, res) => __awaiter(void 0, void 0, void 0, function
     return res.json({
         message: 'Zapato Deportivo creado',
         body: {
-            bota: {
+            deportivo: {
                 marca,
                 color,
                 cantidad,

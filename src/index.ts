@@ -1,7 +1,7 @@
 import express from 'express'
-const app = express();
-
 import indexRoutes from './routes/index'
+
+const app = express();
 
 //middlewares
 app.use(express.json()); //Convertir datos que llegue a formato json

@@ -1,7 +1,9 @@
 import {Router} from 'express'
+import { loginUsuario } from '../controllers/auth.controller'
 import {getBotas, getBotabyId, createBota, deleteBota, updateBota} from '../controllers/botas.controller'
 import {getDeportivos, getDeportivobyId, createDeportivo, deleteDeportivo, updateDeportivo} from '../controllers/deportivos.controller'
 import {getElegantes, getElegantebyId, createElegante, deleteElegante, updateElegante} from '../controllers/elegantes.controller'
+import {getUsuarios, getUsuariobyId, createUsuario, deleteUsuario, updateUsuario} from '../controllers/usuarios.controller'
 
 
 const router = Router();
@@ -26,5 +28,12 @@ router.get('/elegantes/:id', getElegantebyId);
 router.post('/elegantes', createElegante);
 router.put('/elegantes/:id', updateElegante);
 router.delete('/elegantes/:id', deleteElegante);
+
+//Trabajadores
+router.get('/usuarios', getUsuarios);
+router.get('/usuarios/:id', loginUsuario);
+router.post('/usuarios', createUsuario);
+router.put('/usuarios/:id', updateUsuario);
+router.delete('/usuarios/:id', deleteUsuario);
 
 export default router;

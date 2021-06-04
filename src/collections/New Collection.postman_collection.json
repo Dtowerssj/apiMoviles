@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "661636a2-562c-449d-a4e5-a2f50e53c1d5",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Botas",
+			"item": [
+				{
+					"name": "obtener botas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/botas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"botas"
+							]
+						},
+						"description": "obtener todas las botas (hace lo mismo reemplazando \"botas\" a los otros zapatos por \"deportivos\" o \"elegantes\")"
+					},
+					"response": []
+				},
+				{
+					"name": "delete bota",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/botas/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"botas",
+								"2"
+							]
+						},
+						"description": "borrar bota, reemplazar 1 por id"
+					},
+					"response": []
+				},
+				{
+					"name": "Update bota",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tipo\": \"Botas de lluvia\",\r\n    \"color\": \"Verdes\",\r\n    \"marca\": \"Novaflex\",\r\n    \"cantidad\": 4,\r\n    \"precio\": \"40,00 €\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/botas/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"botas",
+								"2"
+							]
+						},
+						"description": "modificar json para modificar"
+					},
+					"response": []
+				},
+				{
+					"name": "crear bota nueva",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Tipo\": \"aaaa\",\r\n    \"Color\": \"Azul\",\r\n    \"Marca\": \"Novaflex\",\r\n    \"Cantidad\": 4,\r\n    \"Precio\": \"40,00 €\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/botas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"botas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Zapatos deportivos",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": null
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

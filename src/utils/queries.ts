@@ -22,11 +22,11 @@ const queries = {
     UPDATE_ELEGANTE: 'UPDATE public."ZapatosElegantes" SET "Tipo"=$1, "Color"=$2, "Marca"=$3, "Cantidad"=$4, "Precio"=$5 WHERE id=$6',
 
     //Usuarios"
-    GET_USERS: `SELECT * FROM public."Trabajadores"`,
-    GET_USER_BY_ID: `SELECT * FROM public."Trabajadores" WHERE id = $1`,
-    INSERT_USER: 'INSERT INTO public."Trabajadores"("Usuario", "Clave", "Salario") VALUES ($1, $2, $3)',
-    DELETE_USER: 'DELETE FROM public."Trabajadores" WHERE ID = $1',
-    UPDATE_USER: 'UPDATE public."Trabajadores" SET "Usuario"=$1, "Clave"=$2, "Salario"=$3 WHERE id=$4',
+    GET_USERS: `SELECT id, nombre, usuario, correo, clave FROM public.users;`,
+    GET_USER_BY_ID: `SELECT * FROM public usuarios WHERE id = $1`,
+    INSERT_USER: 'INSERT INTO public usuarios("Usuario", "Clave", "Salario") VALUES ($1, $2, $3)',
+    DELETE_USER: 'DELETE FROM public usuarios WHERE ID = $1',
+    UPDATE_USER: 'UPDATE public usuarios SET "Usuario"=$1, "Clave"=$2, "Salario"=$3 WHERE id=$4',
     LOGIN_USER: 'SELECT "Usuario", "Clave" FROM public."Trabajadores" WHERE id = $1'
 };
   

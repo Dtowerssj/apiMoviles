@@ -6,6 +6,6 @@ exports.conn = new pg_1.Pool({
     user: 'postgres',
     host: 'localhost',
     password: '17camarones',
-    database: 'TiendaCalzado',
+    database: 'Wunderlist',
     port: 5432
 });

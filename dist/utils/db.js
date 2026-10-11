@@ -5,7 +5,7 @@ const pg_1 = require("pg");
 exports.conn = new pg_1.Pool({
     user: 'postgres',
     host: 'localhost',
-    password: '17camarones',
+    password: process.env.DB_PASSWORD,
     database: 'Wunderlist',
     port: 5432
 });

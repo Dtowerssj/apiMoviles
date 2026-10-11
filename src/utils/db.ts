@@ -3,7 +3,7 @@ import { Pool } from 'pg'
 export const conn = new Pool({
     user: 'postgres',
     host: 'localhost',
-    password: '17camarones',
+    password: process.env.DB_PASSWORD,
     database: 'Wunderlist',
     port: 5432
 })

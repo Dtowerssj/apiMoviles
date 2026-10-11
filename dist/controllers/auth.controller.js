@@ -20,7 +20,7 @@ const queries_1 = __importDefault(require("../utils/queries"));
 const bcryptjs_1 = require("bcryptjs");
 // creando json web token
 const createToken = (StringID, user) => __awaiter(void 0, void 0, void 0, function* () {
-    const token = yield jsonwebtoken_1.default.sign({ id: StringID, user_name: user }, aliases_1.default.jwtSecret || 'wildtoken', {
+    const token = yield jsonwebtoken_1.default.sign({ id: StringID, user_name: user }, aliases_1.default.jwtSecret, {
         expiresIn: 86400
     });
     return token;

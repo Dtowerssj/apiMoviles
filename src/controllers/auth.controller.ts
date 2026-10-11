@@ -10,7 +10,7 @@ import { compare} from 'bcryptjs';
 
 // creando json web token
 export const createToken = async (StringID: string, user: string) => {
-    const token = await jwt.sign({id: StringID, user_name: user}, config.jwtSecret || 'wildtoken', {
+    const token = await jwt.sign({id: StringID, user_name: user}, config.jwtSecret, {
         expiresIn: 86400
     })   
     return token;
